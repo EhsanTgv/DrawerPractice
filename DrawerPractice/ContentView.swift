@@ -9,7 +9,7 @@ import Drawer
 import SwiftUI
 
 struct ContentView: View {
-    @State var heights = [CGFloat(300), CGFloat(100)]
+    @State var heights = [CGFloat(100),CGFloat(300)]
     
     var body: some View {
         NavigationView{
@@ -18,7 +18,20 @@ struct ContentView: View {
                     Text("Some content in here")
                 }
                 Drawer(heights: $heights){
-                    Color.blue
+                    ZStack{
+                        Color(uiColor: UIColor.secondarySystemBackground)
+                        
+                        VStack{
+                            RoundedRectangle(cornerRadius: 12)
+                                .frame(width: 60, height: 8, alignment: .center)
+                                .background(Color.white)
+                                .padding()
+                            
+                            DrawerContentView()
+                            
+                            Spacer()
+                        }
+                    }
                 }
             }
             .navigationTitle("Drawer Practice")
@@ -32,7 +45,19 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .preferredColorScheme(.dark)
                 .previewDevice("iPhone 13 Pro")
+            
+        }
+    }
+}
 
+struct DrawerContentView: View{
+    @State var text = ""
+    
+    var body: some View {
+        VStack {
+            TextField("Search",text: $text)
+                .padding()
+                .background(Color(uiColor: UIColor.systemGray))
         }
     }
 }
