@@ -11,6 +11,7 @@
 		3D4DD224289BACC90017E5B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4DD223289BACC90017E5B4 /* ContentView.swift */; };
 		3D4DD226289BACCB0017E5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DD225289BACCB0017E5B4 /* Assets.xcassets */; };
 		3D4DD229289BACCB0017E5B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4DD228289BACCB0017E5B4 /* Preview Assets.xcassets */; };
+		3D4DD231289BAF590017E5B4 /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = 3D4DD230289BAF590017E5B4 /* Drawer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4DD231289BAF590017E5B4 /* Drawer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = DrawerPractice;
+			packageProductDependencies = (
+				3D4DD230289BAF590017E5B4 /* Drawer */,
+			);
 			productName = DrawerPractice;
 			productReference = 3D4DD21E289BACC90017E5B4 /* DrawerPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 3D4DD215289BACC90017E5B4;
+			packageReferences = (
+				3D4DD22F289BAF590017E5B4 /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
+			);
 			productRefGroup = 3D4DD21F289BACC90017E5B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D4DD22F289BAF590017E5B4 /* XCRemoteSwiftPackageReference "swiftui-drawer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/swiftui-drawer.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D4DD230289BAF590017E5B4 /* Drawer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D4DD22F289BAF590017E5B4 /* XCRemoteSwiftPackageReference "swiftui-drawer" */;
+			productName = Drawer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D4DD216289BACC90017E5B4 /* Project object */;
 }
